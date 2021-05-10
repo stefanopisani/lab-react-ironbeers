@@ -38,14 +38,14 @@ class BeerDetails extends React.Component{
         return(
             <>
             <Navbar />
-            <div style={{marginTop:100}}>
+            <div style={{marginTop:100, display:'flex', flexDirection:'column', alignItems:'center', alignContent:'center'}}>
             <img src={image} alt="beer" style={{width:'50px', height:'120px'}}/>
             <h2> {name} </h2>
             <h3> {tagline}</h3>
             <p> <strong> Created by:</strong> {contributed_by}</p>
             <p> <strong> Attenuation Level:</strong> {attenuation_level}</p>
             <p> <strong> First brewed:</strong> {first_brewed}</p>
-            <p> {description}</p>
+            <p style={{maxWidth:400}} > {description}</p>
             </div>
             </>
         )

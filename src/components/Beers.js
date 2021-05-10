@@ -36,15 +36,17 @@ class Beers extends React.Component {
             <input onChange={this.handleSearch} placeholder=" 🍻 Search Beers 🍺 " />
             </div>
 
-            <div style={{marginTop:100}}>
+            <div style={{margin:'50px', display:'flex', flexDirection:'column', alignItems:'center', alignContent:'center'}}>
                 {this.state.filteredBeers.map((beer, index) => {
                     return(
                         <>
+                        <div className='beer' style={{marginTop:'20px'}}>
                         <img src={beer.image_url} alt="beer" style={{width:'50px', height:'120px'}}/>
                         <h2 key={index}> <NavLink style={{textDecoration: 'none', color:'black'}} to={`beers/${beer._id}`}> {beer.name} </NavLink> </h2>
                         <h3> {beer.tagline}</h3>
                         <p> <strong> Created by:</strong> {beer.contributed_by}</p>
                         <hr/>
+                        </div>
                         </>
                     )
                 })}
